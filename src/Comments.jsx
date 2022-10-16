@@ -9,7 +9,7 @@ const Comments = ({comments, setComments}) => {
   }
     
 	return (
-    <ul className='ul'>
+    <ul>
       {comments.map((comment) => (
         <li key={comment.id}
         style={{'backgroundColor': (comment.id == comments[0].id) ? '#FBCEB1' : 'white'}}
