@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import "./styles.css";
 
 const Comments = ({comments, setComments}) => {
 
@@ -6,18 +7,16 @@ const Comments = ({comments, setComments}) => {
     let newComments = [...comments].filter(comment => comment.id !== id);
     setComments(newComments);
   }
-  
-  console.log(comments[0])
-  
+    
 	return (
-    <ul>
+    <ul className='ul'>
       {comments.map((comment) => (
         <li key={comment.id}
-        style={{'backgroundColor': comments[0] ? 'yellow' : 'white'}}
+        style={{'backgroundColor': (comment.id == comments[0].id) ? '#FBCEB1' : 'white'}}
         >
-          <div>
-            <strong>{comment.text}</strong>
-            <small>{new Date().toLocaleDateString()}</small>
+          <div className='comment'>
+            <p><strong>{comment.text}</strong></p>
+            <p><small>{new Date().toLocaleDateString()}</small></p>
             <button onClick={() => deleteComment(comment.id)}>&times;</button>
           </div>
         </li>

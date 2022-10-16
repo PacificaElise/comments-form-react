@@ -1,0 +1,53 @@
+body {
+  height: 100vh;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid green;
+  background-color: aquamarine;
+  font-weight: bold;
+}
+
+.btn:hover {
+  box-shadow: 0 3px rgb(33, 147, 90) inset;
+}
+
+.btn:active {
+  box-shadow: 0 5px 0 #3c93d5;
+}
+
+.red {
+  color: red;
+}
+
+.comment {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: space-between;
+}
